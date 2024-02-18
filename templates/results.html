@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .query {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results</h1>
+        <p class="query">Your query: {{ query }}</p>
+        {% if response %}
+            <h2>Top 3 Results:</h2>
+            {% for result in response %}
+                <div class="result">
+                    <h3>{{ result.title }}</h3>
+                    <p>{{ result.content }}</p>
+                    <p>Cosine Similarity: {{ result.cosine_similarity }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
