@@ -17,7 +17,7 @@ def connect_to_LLM(query, top_similarities):
         messages=[
             {
                 "role": "user",
-                "content": f"Using the top 3 most similar chunks {top_similarities}, please generate a response to the query: {query}. If none of them are relevant, please say `I don't know`."
+                "content": f"Using the top 5 most similar chunks {top_similarities}, please generate a response to the query: {query}. Put the most weight on the first chunk. If none of them are relevant, please say the exact phrase: `I don't know`. Check that the response actually addresses the query. If it does not, please try again."
             }
         ])
     return response.choices[0].message.content
