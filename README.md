@@ -9,5 +9,8 @@ The RAG is implemented using a chunk size of 500 with provisons to ensure senten
 
 ## Comparison
 The RAG out-performed the LLM, GPT-3.5 turbo, in 81.8% of cases. These (11) test questions were generated based on what a typical coxswain may inquire about, ranging in experience from a novice to a seasoned coxswain. 
+
+
+
 <img width="629" alt="Screenshot 2024-02-20 at 9 41 02 PM" src="https://github.com/kgreed4/AIPI590_LLM_Assignment2/assets/75132518/8b5512f9-4d9a-4b3d-9472-84dbd080c90f">
 
